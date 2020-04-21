@@ -247,3 +247,424 @@
   247  git commit -m "modified files"
   248  history
   249  history > history.txt
+    1  git clone     https://github.com/kubernetes/examples
+    2  ls
+    3  cd examples/
+    4  ll
+    5  gcloud container clusters     get-credentials [cluster-name]     --zone [cluster-zone]
+    6  gcloud container clusters     get-credentials kube-1     --zone us-central1-c
+    7  ls
+    8  ll
+    9  cat redis-master-deployment.yaml
+   10  ll
+   11  lsls
+   12  ls
+   13  ll
+   14  cd guestbook
+   15  ll
+   16  vim redis-master-deployment.yaml
+   17  kubectl create -f redis-master-service.yaml 
+   18  kubectl get service 
+   19  vim redis-slave-deployment.yaml 
+   20  kubectl create -f redis-slave-deployment.yaml 
+   21  kubectl get service 
+   22  kubectl get pods
+   23  cat redis-slave-service.yaml 
+   24  kubectl create -f redis-slave-service.yaml 
+   25  kubectl get service
+   26  cat frontend-service.yaml 
+   27  vim frontend-deployment.yaml 
+   28  kubectl create -f frontend-deployment.yaml 
+   29  sed -i -e     's/NodePort/LoadBalancer/g'     frontend-service.yaml
+   30  vim frontend-service.yaml
+   31  kubectl get services --watch
+   32  ls
+   33  ll
+   34  ps -eaf|grep php
+   35  ps -eaf|grep
+   36  ps -eaf
+   37  clear
+   38  ll
+   39  vim README.md 
+   40  minikube service frontend --url
+   41  kubectl service frontend --url
+   42  kubectl get service frontend
+   43  clear
+   44  kubectl get services
+   45  kubectl apply -f https://k8s.io/examples/application/guestbook/frontend-deployment.yaml
+   46  kubectl get pods -l app=guestbook -l tier=frontend
+   47  kubectl get services
+   48  kubectl get service frontend
+   49  vim frontend-service.yaml 
+   50  history
+   51  kubectl create -f frontend-service.yaml 
+   52  kubectl get service frontend
+   53  ls
+   54  kubectl get service frontend
+   55  curl 10.0.9.133:80
+   56  wget 10.0.9.133:80
+   57  wget 10.0.9.133:31911
+   58  clear
+   59  ll
+   60  vim frontend-service.yaml
+   61  kubectl get service frontend
+   62  ls
+   63  ll
+   64  clea
+   65  claer
+   66  clear
+   67  kubectl get service frontend
+   68  ls
+   69  ll
+   70  vim frontend-service.yaml
+   71  kubectl stop frontend
+   72  kubectl stop -f frontend
+   73  kubectl get services
+   74  kubectl rollout restart frontend
+   75  kubectl logs frintend
+   76  kubectl logs frontend
+   77  kubectl logs kubernetes
+   78  clear
+   79  ll
+   80  kubectl apply -f frontend-service.yaml
+   81  kubectl apply -f frontend-deployment.yaml 
+   82  kubectl get services
+   83  kubectl apply -f frontend.yml
+   84  kubectl apply -f frontend-service.yaml 
+   85  kubectl apply -f service/frontend
+   86  kubectl apply -f service/frontend.yml
+   87  clear
+   88  ll
+   89  kubectl apply -f frontend-service.yaml
+   90  vim frontend-service.yaml
+   91  kubectl apply -f frontend-service.yaml
+   92  kubectl get services
+   93  kubectl get services --wait
+   94  kubectl get services --watch
+   95  clear
+   96  ll
+   97  ls
+   98  ll
+   99  history > his.txt
+  100  vim his.txt 
+  101  ls
+  102  lll
+  103  pwd
+  104  clear
+  105  sudo apt-get update
+  106  sudo apt-get install docker-ce 
+  107  sudo apt-get install docker-ce-cli containerd.io
+  108  docker 
+  109  ls
+  110  clear
+  111  ls
+  112  lubectl
+  113  cubectl
+  114  gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project encoded-mark-274206
+  115  ls
+  116  cd examples/
+  117  ls
+  118  cd ../
+  119  ls
+  120  git clone https://github.com/anurag6063/k8s.git
+  121  ls
+  122  cd k8s/
+  123  ls
+  124  cd complex/k8s/
+  125  ls
+  126  vim client-deployment.yaml 
+  127  kubectl apply -f client-deployment.yaml 
+  128  vim client-deployment.yaml 
+  129  mv client-deployment.yaml client-deployment_backup.yaml 
+  130  rm -rf client-deployment_backup.yaml 
+  131  mv client-deployment.yaml client-deployment_backup.yaml 
+  132  ls
+  133  vim client-deployment.yaml
+  134  mv /home/anuragyadav6063/client-deployment.yaml 
+  135  mv /home/anuragyadav6063/client-deployment.yaml .
+  136  ls
+  137  kubectl apply -f client-deployment.yaml
+  138  kubectl apply -f client-deployment.yaml --validate=false
+  139  vim client-deployment.yaml 
+  140  kubectl apply -f client-deployment.yaml --validate=false
+  141  kubectl apply -f client-cluster-ip-service.yaml 
+  142  vim client-cluster-ip-service.yaml 
+  143  kubectl apply -f client-cluster-ip-service.yaml 
+  144  vim client-cluster-ip-service.yaml 
+  145  kubectl apply -f client-cluster-ip-service.yaml 
+  146  kubect get pods
+  147  kubect get deployments
+  148  kubectl get deployments
+  149  kubectl get pods
+  150  kubectl get services
+  151  kubectl get pods
+  152  kubectl get deployments
+  153  kubectl rollout status
+  154  kubectl rollout status client-deployment.yaml 
+  155  kubectl rollout status client-deployment-5c99fc9fb7-qwfgv
+  156  vim client-deployment.yaml 
+  157  kubectl apply -f client-deployment.yaml
+  158  kubect set image Deployment/client-deployment client=stephengrinder/multiclient:latest
+  159  kubectl set image Deployment/client-deployment client=stephengrinder/multiclient:latest
+  160  kubectl get deployments
+  161  kubectl get pods
+  162  kubectl set image Deployment/client-deployment client=stephengrinder/multiclient
+  163  kubectl get pods
+  164  kubectl set image Deployment/client-deployment client=stephengrinder/multi-client
+  165  kubectl get pods
+  166  kubectl set image Deployment/client-deployment client=stephengrinder/multi-client:v5
+  167  kubectl get pods
+  168  kubectl set image Deployment/client-deployment client=stephengrinder/multi-client
+  169  kubectl get pods
+  170  kubectl set image Deployment/client-deployment client=hello-world
+  171  kubectl get pods
+  172  ls
+  173  clear
+  174  ls
+  175  vim worker-deployment.yaml
+  176  kubectl apply -f worker-deployment.yaml 
+  177  vim worker-deployment.yaml 
+  178  kubectl apply -f worker-deployment.yaml 
+  179  kubectl get pods
+  180  ls
+  181  docker 
+  182  docker run stephengrinder/multi-client
+  183  ls
+  184  clear
+  185  docker pull stephengrider/multi-client
+  186  kubectl apply -f worker-deployment.yaml 
+  187  ls
+  188  cd k8s/
+  189  ls
+  190  cd complex/
+  191  ls
+  192  cd client/
+  193  ls
+  194  cd ../
+  195  ls
+  196  cd ../
+  197  ls
+  198  cd ../
+  199  ls
+  200  vim client-cluster-ip-service.yaml 
+  201  cd k8s/
+  202  ls
+  203  cd complex/
+  204  ls
+  205  cd k8s/
+  206  ls
+  207  vim client-deployment.yaml 
+  208  kubectl apply -f worker-deployment.yaml
+  209  kubectl set image Deployment/client-deployment client=stephengrider/multi-client
+  210  kubectl get deployments
+  211  docker pull stephengrider/multi-worker
+  212  ls
+  213  vim worker-deployment.yaml
+  214  kubectl set image Deployment/worker-deployment client=stephengrider/multi-worker
+  215  vim worker-deployment.yaml
+  216  vim worker-deployment.yaml 
+  217  cat worker-deployment.yaml 
+  218  worker-deployment
+  219  kubectl set image Deployment/worker-deployment client=stephengrider/multi-worker
+  220  kubectl set image Deployment/worker-deployment worker=stephengrider/multi-worker
+  221  ls
+  222  cd k8s/k
+  223  cd k8s/
+  224  ls
+  225  cd complex/
+  226  ls
+  227  cd k8s/
+  228  ls
+  229  ls -lrt
+  230  cd ../
+  231  ls
+  232  cd ../
+  233  ls
+  234  cd ../
+  235  ls
+  236  git status
+  237  cd k8s/
+  238  git status
+  239  kubectl apply -f complex/k8s/client-cluster-ip-service.yaml
+  240  kubectl pods
+  241  git add . 
+  242  git status
+  243  git commit -m "modified files"
+  244  git commit -m "modified files" --global
+  245  git config --global user.email "anuragyadav6063@gmail.com"
+  246  git config --global user.name "anurag"
+  247  git commit -m "modified files"
+  248  history
+  249  history > history.txt
+  250  vim history.txt 
+  251  git sttaus
+  252  git status
+  253  clear
+  254  git get pods
+  255  kubectl get services
+  256  cd ../
+  257  ls
+  258  cd k8s/
+  259  ls
+  260  cd complex/
+  261  ls
+  262  cd k8s/
+  263  ls
+  264  ls -lrt
+  265  vim client-cluster-ip-service.yaml
+  266  clear
+  267  kubectl get pods
+  268  kubectl get services
+  269  vim server-deployment.yml
+  270  vim server-cluster-ip-service.yaml
+  271  ls
+  272  mv server-deployment.yml server-deployment.yaml
+  273  ls
+  274  ll
+  275  vim worker-deployment.yaml
+  276  cd ../
+  277  kubectl apply -f k8s/
+  278  vim k8s/server-deployment.yaml 
+  279  kubectl apply -f k8s/
+  280  kubectl get pods
+  281  ls k8s/
+  282  vim k8s/server-deployment.yaml 
+  283  docker pull kubectl apply -f k8s/
+  284  cat k8s/server-deployment.yaml 
+  285  docker pull stephengrinder/multi-server
+  286  vim k8s/server-deployment.yaml 
+  287  cat k8s/server-deployment.yaml 
+  288  kubectl apply -f k8s/
+  289  kubectl get pods
+  290  ls k8s/
+  291  cp k8s/ k8s_bk
+  292  cp -r k8s/ k8s_bk
+  293  ll
+  294  cd k8s_bk/
+  295  ll
+  296  cd ../
+  297  kubect delete k8s/
+  298  kubectl delete k8s/
+  299  kubectl delete k8s
+  300  kubectl get pods
+  301  docker delete deployment client-deployment-5c99fc9fb7-8pjs4
+  302  kubectl delete deployment client-deployment-5c99fc9fb7-8pjs4
+  303  kubectl get pods
+  304  clear
+  305  ls
+  306  ll
+  307  kubectl get services
+  308  kubectl get service
+  309  kubectl get pods
+  310  kubectl logs server-deployment-65b456947b-7l4vw
+  311  clear
+  312  vim redis-deployment.yaml
+  313  vim redis-cluset-ip-service.yaml
+  314  cd ../
+  315  ll
+  316  cd complex/
+  317  ll
+  318  mv redis-deployment.yaml redis-cluset-ip-service.yaml k8s/
+  319  ll
+  320  rm -rf k8s_bk/
+  321  ll
+  322  kubectl apply -f k8s/
+  323  vim k8s/redis-deployment.yaml
+  324  kubectl apply -f k8s/
+  325  vim k8s/redis-deployment.yaml
+  326  kubectl apply -f k8s/
+  327  vim k8s/redis-deployment.yaml
+  328  kubectl apply -f k8s/
+  329  kubectl get service
+  330  vim k8s/postgres-deployment.yaml
+  331  vim k8s/postgres-cluster-ip-service.yaml
+  332  kubectl apply -f k8s/
+  333  ll k8s/
+  334  vim postgres-cluster-ip-service.yaml
+  335  vim k8s/postgres-cluster-ip-service.yaml
+  336  vim k8s/redis-deployment.yaml
+  337  vim k8s/postgres-deployment.yaml
+  338  kubectl apply -f k8s/
+  339  kubectl get pods
+  340  kubectl logs postgres-deployment-6d6c4b667b-ftwhh
+  341  docker pull postgres
+  342  kubectl apply -f k8s/
+  343  kubectl get pods
+  344  git status
+  345  git add .
+  346  git commit -m "full files"
+  347  git push https://github.com/anurag6063/k8s
+  348  git push https://github.com/anurag6063/k8s.git
+  349  vls
+  350  ls
+  351  cd examples/
+  352  ls
+  353  cd ../
+  354  ll
+  355  cd k8s/complex/
+  356  ll
+  357  clear
+  358  ll
+  359  vim k8s/database-persistent-volume-claim.yaml
+  360  kubectl get storageclass
+  361  kubectl describe storageclass
+  362  vim k8s/postgres-deployment.yaml 
+  363  kubectl apply -f k8s/
+  364  vim k8s/database-persistent-volume-claim.yaml
+  365  vim k8s/postgres-deployment.yaml
+  366  vim k8s/database-persistent-volume-claim.yaml
+  367  kubectl apply -f k8s/
+  368  kubectl get pods
+  369  kubectl get pvc
+  370  kubectl get pods
+  371  kubectl logs postgres-deployment-8576df7bfc-bjccl
+  372  ll
+  373  vim k8s/worker-deployment.yaml
+  374  vim k8s/server-deployment.yaml 
+  375  cd k8s/
+  376  kubectl create secret generic pgpassword --from-literal PGPASSWORD=1234asas
+  377  kubectl get secret
+  378  vim server-deployment.yaml 
+  379  vim postgres-deployment.yaml 
+  380  cd ../
+  381  kubctl apply -f k8s/
+  382  kubectl apply -f k8s/
+  383  vim postgres-deployment.yaml 
+  384  cd k8s/
+  385  ll
+  386  vim postgres-deployment.yaml 
+  387  vim server-deployment.yaml 
+  388  vim worker-deployment.yaml 
+  389  cd ../
+  390  kubectl apply -f k8s/
+  391  vim k8s/server-deployment.yaml
+  392  cd ../
+  393  kubectl apply -f k8s/
+  394  cd complex/
+  395  kubectl apply -f k8s/
+  396  vim k8s/server-deployment.yaml
+  397  kubectl apply -f k8s/
+  398  clear
+  399  ls
+  400  kubectl apply -f k8s/
+  401  vim k8s/server-deployment.yaml
+  402  cat k8s/server-deployment.yaml 
+  403  vim k8s/server-deployment.yaml
+  404  kubectl apply -f k8s/
+  405  kubectl get pods
+  406  clear
+  407  kubectl get pods
+  408  clear
+  409  ls
+  410  minicube dashboard
+  411  ll
+  412  cd k8s/
+  413  ll
+  414  git status
+  415  got add .
+  416  git add .
+  417  git commit -m "latest changes"
+  418  history | grep push
+  419  git push https://github.com/anurag6063/k8s.git
+  420  ls
+  421  history >> history.txt 
